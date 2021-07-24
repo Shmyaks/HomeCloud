@@ -9,6 +9,11 @@ class Users(db.Model, UserMixin):
     password = db.Column(db.String(256))
 
 
+class Directoryes(db.Modal):
+    id = db.Column(db.Integer, primary_key=True)
+    path = db.Column(db.String(512))
+
+
 @login_manager.user_loader
 def load_user(user_id):
     return Users.query.get(user_id)
