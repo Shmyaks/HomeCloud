@@ -8,5 +8,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'very secret key for me'
 
+login_manager = LoginManager(app)
+db = SQLAlchemy(app)
 
 import routes
